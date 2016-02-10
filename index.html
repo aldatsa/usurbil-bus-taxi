@@ -13,6 +13,7 @@
         <script src="js/jquery-2.2.0.min.js"></script>
         <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
         <script src="js/leaflet.geocsv.js"></script>
+        <script src="js/gpx.js"></script>
         <script>
             var mapa = L.map('mapa').setView([43.28, -2.05], 14);
             L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
@@ -38,6 +39,13 @@
                     }
                 });
                 mapa.addLayer(geoLayer);
+
+                var gpx = 'gpx/bustaxi.gpx';
+                new L.GPX(gpx, {
+                    async: true
+                }).on('loaded', function(e) {
+                    mapa.fitBounds(e.target.getBounds());
+                }).addTo(mapa);
             });
         </script>
     </body>
