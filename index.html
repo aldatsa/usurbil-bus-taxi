@@ -21,7 +21,16 @@
             }).addTo(mapa);
 
             $.get('bustaxigeltokiak.csv', function(csvContents) {
-                var geoLayer = L.geoCsv(csvContents, {firstLineTitles: true, fieldSeparator: ',', latitudeTitle: 'Latitudea', longitudeTitle:'Longitudea'});
+                var geoLayer = L.geoCsv(csvContents, {
+                    firstLineTitles: true,
+                    fieldSeparator: ',',
+                    latitudeTitle: 'Latitudea',
+                    longitudeTitle:'Longitudea',
+                    onEachFeature: function (feature, layer) {
+                        console.log(feature);
+                        layer.bindPopup(feature.properties["geltokia"]);
+                    }
+                });
                 mapa.addLayer(geoLayer);
             });
         </script>
