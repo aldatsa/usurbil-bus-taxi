@@ -29,6 +29,14 @@
                     onEachFeature: function (feature, layer) {
                         console.log(feature);
                         layer.bindPopup(feature.properties["geltokia"]);
+                    },
+                    pointToLayer: function (feature, latlng) {
+                        return L.marker(latlng, {
+                            icon: L.icon({
+                                iconUrl: "img/bustaxi.png",
+                                iconSize: [24, 24]
+                            })
+                        });
                     }
                 });
                 mapa.addLayer(geoLayer);
