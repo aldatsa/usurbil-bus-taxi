@@ -42,7 +42,15 @@
 
                 var gpx = 'gpx/bustaxi.gpx';
                 new L.GPX(gpx, {
-                    async: true
+                    async: true,
+                    marker_options: {
+                        startIconUrl: '',
+                        endIconUrl: '',
+                        shadowUrl: ''
+                    },
+                    polyline_options: {
+                        color: 'blue'
+                    }
                 }).on('loaded', function(e) {
                     mapa.fitBounds(e.target.getBounds());
                 }).addTo(mapa);
