@@ -27,7 +27,6 @@
                     latitudeTitle: 'Latitudea',
                     longitudeTitle:'Longitudea',
                     onEachFeature: function (feature, layer) {
-                        console.log(feature);
                         layer.bindPopup(feature.properties["geltokia"]);
                     },
                     pointToLayer: function (feature, latlng) {
