@@ -16,7 +16,7 @@
         <script>
             var mapa = L.map('mapa').setView([43.28, -2.05], 14);
             L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-            	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+            	attribution: 'Lauzak &copy; Esri &mdash; Iturburua: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, eta GIS erabiltzaile komunitatea'
             }).addTo(mapa);
 
             $.get('bustaxigeltokiak.csv', function(csvContents) {
@@ -32,7 +32,7 @@
                         return L.marker(latlng, {
                             icon: L.icon({
                                 iconUrl: "img/bustaxi.png",
-                                iconSize: [24, 24]
+                                iconSize: [32, 32]
                             })
                         });
                     }
