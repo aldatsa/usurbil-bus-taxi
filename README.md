@@ -3,12 +3,12 @@ Usurbilgo Udalaren datu irekien katalogoan oinarrituta sortutako Usurbilgo bus t
 
 # Txertatu zure webgunean
 
-Aurrebista bat ikusteko klikatu [hemen](http://aldatsa.eus/usurbil-bus-taxi/).
+Aurrebista bat ikusteko klikatu [hemen](https://aldatsa.eus/usurbil-bus-taxi/).
 
 Mapa hau zure webgunean txertatu nahi baduzu erabili txertatzeko kode hau:
 
 ```html
-<iframe style="max-width: 100%" height="600" width="800" src="http://aldatsa.eus/usurbil-bus-taxi/" frameBorder="0" scrolling="no"></iframe>
+<iframe style="max-width: 100%" height="600" width="800" src="https://aldatsa.eus/usurbil-bus-taxi/" frameBorder="0" scrolling="no"></iframe>
 ```
 
 # Lizentzia
